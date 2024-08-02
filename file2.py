@@ -34,6 +34,7 @@ class FileFilter:
         for file in self.files:
             try:
                 content = read_file(file)
+                print(content)
                 self.similarity_search(file, content)
                 self.logger.info("Filtered files.")
             except Exception as e:
